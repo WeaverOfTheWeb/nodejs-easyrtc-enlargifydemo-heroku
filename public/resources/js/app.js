@@ -10,10 +10,10 @@
   var elMessages = $('#messages_container');
   var elUsers = $('#user_container');
   var elText = $('#message');
-  var btnSend = $('#send_btn');
+  var btnSend = ;
 
   // bind the event listeners
-  btnSend.on('click', function() {
+  $('#send_btn').on('click', function() {
     var text = elText.val().trim();
     if(text){
       elText.val('');
@@ -41,7 +41,7 @@
   // handle the key events
   elText.on('keypress', function(e) {
     if (e.keyCode == 13 && !e.shiftKey && !btnSend.hasClass('disabled')) {
-      btnSend.trigger('click');
+      $('#send_btn').trigger('click');
       return false;
     }
   });
