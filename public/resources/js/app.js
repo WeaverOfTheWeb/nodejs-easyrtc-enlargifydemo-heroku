@@ -39,7 +39,7 @@
 
   // handle the key events
   elText.on('keypress', function(e) {
-    if (e.keyCode == 13 && !e.shiftKey && !btnSend.hasClass('disabled')) {
+    if (e.keyCode == 13 && !e.shiftKey && !$('#send_btn').hasClass('disabled')) {
       $('#send_btn').trigger('click');
       return false;
     }
@@ -172,7 +172,7 @@
     // set the partner
     self.partnerId = id;
     // enable the button to allow sending messages
-    btnSend.removeClass('disabled');
+    $('#send_btn').removeClass('disabled');
   }
 
   function disconnectMeFromPartner() {
@@ -181,7 +181,7 @@
     // reset the partner
     self.partnerId = null;
     // disable the button
-    btnSend.addClass('disabled');
+    $('#send_btn').addClass('disabled');
   }
 
   // start the process
