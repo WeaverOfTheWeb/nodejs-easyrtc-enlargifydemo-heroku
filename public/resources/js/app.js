@@ -141,7 +141,9 @@
     connectMeToPartner(id);
     
     // fill these functions if necessary
-    var successCB = function() {};
+    var successCB = function() {
+      $('#send_btn').addClass('disabled');
+    };
     var failureCB = function() {
       // reset partner on failure
       disconnectMeFromPartner();
