@@ -10,7 +10,6 @@
   var elMessages = $('#messages_container');
   var elUsers = $('#user_container');
   var elText = $('#message');
-  var btnSend = ;
 
   // bind the event listeners
   $('#send_btn').on('click', function() {
