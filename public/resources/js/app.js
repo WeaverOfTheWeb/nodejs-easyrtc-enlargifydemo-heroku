@@ -163,9 +163,11 @@
       disconnectMeFromPartner();
     }
     easyrtc.hangupAll();
+    console.log('hangupCall');
   }
 
   function connectMeToPartner(id) {
+    console.log('disconnectMeFromPartner');
     addMessage('Connected');
     // set the partner
     self.partnerId = id;
@@ -174,6 +176,7 @@
   }
 
   function disconnectMeFromPartner() {
+    console.log('disconnectMeFromPartner');
     addMessage('Disconnected');
     // reset the partner
     self.partnerId = null;
